@@ -9,5 +9,6 @@ script:
   - ./gradlew check
   - ./gradlew codeCoverageReport
   - ls -al
+  - ls ./build/customJacocoReportDir/codeCoverageReport/
 after_success:
   - bash <(curl -s https://codecov.io/bash) -f "./build/customJacocoReportDir/codeCoverageReport/codeCoverageReport.xml"
