@@ -8,6 +8,6 @@ script:
   - ./gradlew clean
   - ./gradlew check
   - ./gradlew codeCoverageReport
+  - ls -al
 after_success:
   - bash <(curl -s https://codecov.io/bash) -f "./build/customJacocoReportDir/codeCoverageReport/codeCoverageReport.xml"
-  - 
